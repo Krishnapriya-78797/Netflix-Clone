@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #141414;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+img {
+    display: block;
+}
+
+/* =========================
+   Navbar
+========================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 50px;
+
+    background-color: rgba(0, 0, 0, 0.85);
+
+    z-index: 1000;
+}
+
+.left-nav {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 36px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li {
+    cursor: pointer;
+}
+
+.nav-menu a {
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #b3b3b3;
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-nav span {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.profile-image {
+    width: 35px;
+    height: 35px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* =========================
+   Hero Section
+========================= */
+
+.hero-section {
+    height: 100vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.9)
+        ),
+        url("https://wallpapercave.com/wp/wp1917154.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin-left: 60px;
+}
+
+.hero-title {
+    font-size: 70px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+}
+
+.play-btn,
+.info-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 12px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.play-btn {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.play-btn:hover {
+    opacity: 0.8;
+}
+
+.info-btn {
+    background-color: rgba(109, 109, 110, 0.7);
+    color: white;
+}
+
+.info-btn:hover {
+    background-color: rgba(109, 109, 110, 0.5);
+}
+
+/* =========================
+   Movie Sections
+========================= */
+
+.movies-section {
+    padding: 30px 50px;
+}
+
+.movies-section h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.movies-row {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.movies-row::-webkit-scrollbar {
+    display: none;
+}
+
+.poster {
+    width: 220px;
+    border-radius: 6px;
+    cursor: pointer;
+
+    transition: transform 0.4s ease;
+}
+
+.poster:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   Footer
+========================= */
+
+.footer {
+    padding: 50px;
+    text-align: center;
+    color: #b3b3b3;
+}
+
+.footer-links {
+    margin: 20px 0;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links a {
+    color: #b3b3b3;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media screen and (max-width: 992px) {
+
+    .hero-title {
+        font-size: 50px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .poster {
+        width: 180px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .left-nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        margin: 20px;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .movies-section {
+        padding: 20px;
+    }
+
+    .poster {
+        width: 150px;
+    }
+
+    .button-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .poster {
+        width: 130px;
+    }
+
+    .movies-section h2 {
+        font-size: 20px;
+    }
+}
